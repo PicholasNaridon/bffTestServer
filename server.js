@@ -29,7 +29,7 @@ app.get('/dashboardConfig', function (req, res) {
   res.send(config())
 })
 
-app.get('/doughNutChart/:type', function (req, res) {
+app.get('/donutchart/:type', function (req, res) {
     res.send(doughnut[camelize(req.params.type)]())
 })
 
