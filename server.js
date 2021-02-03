@@ -13,6 +13,7 @@ var columnChart = require('./mockedData/column-chart')
 var actionList = require('./mockedData/action-list')
 var actionGrid = require('./mockedData/action-grid')
 var dashboardContent = require('./mockedData/dashboard-content')
+var countList = require('./mockedData/count-list')
 
 
 var app = express();
@@ -73,7 +74,10 @@ app.get('/dashboardContent/:type', function (req, res) {
     res.send(dashboardContent[camelize(req.params.type)]())
 })
   
-
+app.get('/countList/:type', function (req, res) {
+    res.send(countList[camelize(req.params.type)]())
+})
+  
   
 
 app.listen(PORT, function() {
