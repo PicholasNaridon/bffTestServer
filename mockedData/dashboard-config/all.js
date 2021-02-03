@@ -18,7 +18,7 @@ module.exports = () => {
 					{
 						noContentText: TEXT.noContentMessage,
 						title: 'Action Grid With One Tab',
-						widgetConfigUrl: '/ActionGrid/OneTabs',
+						widgetConfigUrl: '/ActionGrid/OneTab',
 						widthPreference: 'halfWidth',
 					},
 					{
