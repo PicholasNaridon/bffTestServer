@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path')
-var config = require('./mockedData/dashboard-config/all')
+
+var config = require('./mockedData/dashboard-config/config')
 var donutChart = require('./mockedData/donut-chart')
 var heatMap = require('./mockedData/heat-map')
 var dataTable = require('./mockedData/data-table')
