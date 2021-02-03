@@ -19,51 +19,55 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // mongoose instance connection url connection
-
+function camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+  }
 
 app.get('/dashboardConfig', function (req, res) {
   res.send(config())
 })
 
 app.get('/doughNutChart/:type', function (req, res) {
-    console.log(req.params.type)
-    res.send(doughnut[req.params.type]())
+    console.log(camelize(req.params.type))
+    res.send(doughnut[camelize(req.params.type)]())
 })
 
 app.get('/heatmap/:type', function (req, res) {
-    res.send(heatmap[req.params.type]())
+    res.send(heatmap[camelize(req.params.type)]())
 })
 
 app.get('/dataTable/:type', function (req, res) {
-    res.send(dataTable[req.params.type]())
+    res.send(dataTable[camelize(req.params.type)]())
 })
 
 app.get('/simpleLineChart/:type', function (req, res) {
-    res.send(simpleLineChart[req.params.type]())
+    res.send(simpleLineChart[camelize(req.params.type)]())
 })
   
 app.get('/simplelist/:type', function (req, res) {
-    res.send(simpleList[req.params.type]())
+    res.send(simpleList[camelize(req.params.type)]())
 })
 
 app.get('/stackedColumnChart/:type', function (req, res) {
-    res.send(stackedColumnChart[req.params.type]())
+    res.send(stackedColumnChart[camelize(req.params.type)]())
 })
 
 app.get('/combinationChart/:type', function (req, res) {
-    res.send(combinationChart[req.params.type]())
+    res.send(combinationChart[camelize(req.params.type)]())
 })
 
 app.get('/columnChart/:type', function (req, res) {
-    res.send(columnChart[req.params.type]())
+    res.send(columnChart[camelize(req.params.type)]())
 })
 
 app.get('/actionList/:type', function (req, res) {
-    res.send(actionList[req.params.type]())
+    res.send(actionList[camelize(req.params.type)]())
 })
 
 app.get('/actionGrid/:type', function (req, res) {
-    res.send(actionGrid[req.params.type]())
+    res.send(actionGrid[camelize(req.params.type)]())
 })
 
 app.get('/dashboardContent/:type', function (req, res) {
