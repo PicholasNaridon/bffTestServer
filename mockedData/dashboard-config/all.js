@@ -218,7 +218,7 @@ module.exports = () => {
 					{
 						noContentText: TEXT.noContentMessage,
 						title: 'Data Table',
-						widgetConfigUrl: '/DataTable/OneTabs',
+						widgetConfigUrl: '/DataTable/OneTab',
 						widthPreference: 'halfWidth',
 					},
 					{

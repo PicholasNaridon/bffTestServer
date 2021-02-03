@@ -30,52 +30,8 @@ app.get('/dashboardConfig', function (req, res) {
   res.send(config())
 })
 
-app.get('/donutchart/:type', function (req, res) {
-    res.send(doughnut[camelize(req.params.type)]())
-})
-
-app.get('/heatmap/:type', function (req, res) {
-    res.send(heatmap[camelize(req.params.type)]())
-})
-
-app.get('/dataTable/:type', function (req, res) {
-    res.send(dataTable[camelize(req.params.type)]())
-})
-
-app.get('/simpleLineChart/:type', function (req, res) {
-    res.send(simpleLineChart[camelize(req.params.type)]())
-})
-  
-app.get('/simplelist/:type', function (req, res) {
-    res.send(simpleList[camelize(req.params.type)]())
-})
-
-app.get('/stackedColumnChart/:type', function (req, res) {
-    res.send(stackedColumnChart[camelize(req.params.type)]())
-})
-
-app.get('/combinationChart/:type', function (req, res) {
-    res.send(combinationChart[camelize(req.params.type)]())
-})
-
-app.get('/columnChart/:type', function (req, res) {
-    res.send(columnChart[camelize(req.params.type)]())
-})
-
-app.get('/actionList/:type', function (req, res) {
-    res.send(actionList[camelize(req.params.type)]())
-})
-
-app.get('/actionGrid/:type', function (req, res) {
-    res.send(actionGrid[camelize(req.params.type)]())
-})
-
-app.get('/dashboardContent/:type', function (req, res) {
-    res.send(dashboardContent[camelize(req.params.type)]())
-})
-  
-app.get('/countList/:type', function (req, res) {
-    res.send(countList[camelize(req.params.type)]())
+app.get('/:chart/:type', function (req, res) {
+    res.send(eval(camelize(req.params.bleh))[camelize(req.params.type)]())
 })
   
   
