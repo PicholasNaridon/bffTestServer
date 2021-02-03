@@ -70,7 +70,7 @@ app.get('/actionGrid/:type', function (req, res) {
 })
 
 app.get('/dashboardContent/:type', function (req, res) {
-    res.send(dashboardContent.tabbed())
+    res.send(dashboardContent[camelize(req.params.type)]())
 })
   
 
