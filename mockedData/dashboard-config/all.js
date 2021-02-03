@@ -140,7 +140,7 @@ module.exports = () => {
 					{
 						noContentText: TEXT.noContentMessage,
 						title: 'Column Chart',
-						widgetConfigUrl: '/columnchart/full',
+						widgetConfigUrl: '/ColumnChart/full',
 						widthPreference: 'halfWidth',
 					},
 					{
@@ -446,7 +446,7 @@ module.exports = () => {
 					{
 						noContentText: TEXT.noContentMessage,
 						title: 'Invalid Link Count List',
-						widgetConfigUrl: '/CountList/InvalidList',
+						widgetConfigUrl: '/CountList/InvalidUrls',
 						widthPreference: 'halfWidth',
 					},
 					{
