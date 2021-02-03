@@ -2,11 +2,13 @@
 
 ## Setup
 
-Installation: `npm install`
-Running the webserver: `npm run develop`
+**Installation:** `npm install`
+
+**Running the webserver:** `npm run develop`
 
 Server will run on `localhost:8080`
 
+## Routes
 Routes are setup in the following patterns
 
 `/dashboardConfig`
