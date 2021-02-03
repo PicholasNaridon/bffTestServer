@@ -31,39 +31,39 @@ app.get('/doughNutChart/:type', function (req, res) {
 })
 
 app.get('/heatmap/:type', function (req, res) {
-    res.send(heatmap.full())
+    res.send(heatmap[req.params.type]())
 })
 
 app.get('/dataTable/:type', function (req, res) {
-    res.send(dataTable.full())
+    res.send(dataTable[req.params.type]())
 })
 
 app.get('/simpleLineChart/:type', function (req, res) {
-    res.send(simpleLineChart.full())
+    res.send(simpleLineChart[req.params.type]())
 })
   
 app.get('/simplelist/:type', function (req, res) {
-    res.send(simpleList.full())
+    res.send(simpleList[req.params.type]())
 })
 
 app.get('/stackedColumnChart/:type', function (req, res) {
-    res.send(stackedColumnChart.full())
+    res.send(stackedColumnChart[req.params.type]())
 })
 
 app.get('/combinationChart/:type', function (req, res) {
-    res.send(combinationChart.full())
+    res.send(combinationChart[req.params.type]())
 })
 
 app.get('/columnChart/:type', function (req, res) {
-    res.send(columnChart.full())
+    res.send(columnChart[req.params.type]())
 })
 
 app.get('/actionList/:type', function (req, res) {
-    res.send(actionList.full())
+    res.send(actionList[req.params.type]())
 })
 
 app.get('/actionGrid/:type', function (req, res) {
-    res.send(actionGrid.full())
+    res.send(actionGrid[req.params.type]())
 })
 
 app.get('/dashboardContent/:type', function (req, res) {
